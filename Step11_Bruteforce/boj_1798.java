@@ -3,10 +3,11 @@ package Step11_Bruteforce;
 import java.util.Scanner;
 
 /**
+ * https://www.acmicpc.net/problem/2798
  * 블랙잭
  * N장의 카드에 써져 있는 숫자가 주어졌을 때, M을 넘지 않으면서 M에 최대한 가까운 카드 3장의 합을 구해 출력하시오.
- * https://www.acmicpc.net/problem/2798
  */
+
 public class boj_1798 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
