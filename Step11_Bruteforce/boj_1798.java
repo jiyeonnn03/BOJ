@@ -20,6 +20,8 @@ public class boj_1798 {
             array[i] = sc.nextInt();    //배열에 저장
         }
         System.out.println(search(array, M));
+
+        sc.close();
     }
 
     public static int search(int[] array, int M) {

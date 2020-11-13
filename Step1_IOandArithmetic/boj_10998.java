@@ -15,5 +15,7 @@ public class boj_10998 {
         int b = sc.nextInt();
 
         System.out.println(a * b);
+
+        sc.close();
     }
 }

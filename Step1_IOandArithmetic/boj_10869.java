@@ -19,5 +19,7 @@ public class boj_10869 {
         System.out.println(a*b);    //곱셈
         System.out.println(a/b);    //나눗셈(몫)
         System.out.println(a%b);    //나눗셈(나머지)
+
+        sc.close();
     }
 }

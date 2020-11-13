@@ -12,6 +12,8 @@ public class boj_10870 {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         System.out.println(fibo(n));
+
+        sc.close();
     }
 
     public static int fibo(int n) {
