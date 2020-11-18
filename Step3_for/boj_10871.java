@@ -7,30 +7,36 @@ package Step3_for;
  * 이때, A에서 X보다 작은 수를 모두 출력하는 프로그램을 작성하시오.
  */
 
-import java.util.Scanner;
+import java.io.*;
+import java.util.StringTokenizer;
 
 public class boj_10871 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();       //입력값 개수
-        int x = sc.nextInt();       //수식의 기준이 되는 값
-        int[] array = new int[n];                    //입력값
-        String num;
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        StringTokenizer st = new StringTokenizer(br.readLine());
+
+        int n = Integer.parseInt(st.nextToken());           //입력값 개수
+        int x = Integer.parseInt(st.nextToken());           //수식의 기준이 되는 값
+        int num;                                            //입력값
 
         // 1 <= n, x <= 10000
         if (n < 1 || x < 1 || n > 10000 || x > 10000)
             return;
 
-        num = sc.next();
+        //공백을 기준으로 n개의 숫자 입력
+        st = new StringTokenizer(br.readLine());
 
         for (int i = 0; i < n; i++) {
-            array[i] = Integer.parseInt(num.split(" ")[i]);
-
-            if (array[i] < x)
-                System.out.print(array[i] + " ");
+            num = Integer.parseInt(st.nextToken());
+            // x보다 작은 수가 입력 되었을 경우 출력버퍼에 저장
+            if (num < x) {
+                bw.write(num + " ");                    //출력
+            }
         }
-
-        sc.close();
+        //버퍼 비우기
+        bw.flush();
     }
 }
 
